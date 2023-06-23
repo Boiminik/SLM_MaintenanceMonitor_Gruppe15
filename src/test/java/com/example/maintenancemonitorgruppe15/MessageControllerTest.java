@@ -22,5 +22,14 @@ class MessageControllerTest {
         assertEquals(test, mCont.currentMessage);
     }
 
+    @Test
+    void resetMessage(){//test3 resets any custom message to the default message successfully
+        MessageController mCont = new MessageController();
+        String test = "Test Message, DO NOT DELETE";
+        mCont.setMessage(test);
+        mCont.resetMessage();
+        assertEquals(mCont.message, mCont.currentMessage);
+    }
+
 
 }

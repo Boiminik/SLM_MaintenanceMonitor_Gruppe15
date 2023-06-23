@@ -20,5 +20,11 @@ public class MessageController {
         return "ok";
     }
 
+    @RequestMapping("/api/message/reset")
+    public String resetMessage(){
+        currentMessage = message; //resets any set custom message to the default message; does nothing if already default
+        return "ok";
+    }
+
 
 }
